@@ -3,9 +3,7 @@ node("docker") {
         
         sh "ls -l"
         sh "env"
-      #  sh "toolbox"
-      #  sh "dnf install git"
-      #  sh "git --version"
+      
         git url: "https://github.com/dvohra/mysql.git", credentialsId: 'dvohra-github'
     
         sh "git rev-parse HEAD > .git/commit-id"
