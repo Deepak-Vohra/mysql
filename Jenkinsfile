@@ -1,11 +1,10 @@
 node("docker") {
     docker.withRegistry('https://index.docker.io/v1/', 'dvohra-dockerhub') {
         deleteDir()
-  stage 'Checkout'
-  checkout scm
+
         sh "ls -l"
         sh "env"
-       sh ""
+       sh "git --version"
       
         git url: "https://github.com/dvohra/mysql.git", credentialsId: 'dvohra-github'
     
