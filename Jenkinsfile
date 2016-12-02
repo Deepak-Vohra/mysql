@@ -3,7 +3,7 @@ node("docker") {
         
         sh "ls -l"
         sh "env"
-        docker --version
+       sh "docker --version"
       
         git url: "https://github.com/dvohra/mysql.git", credentialsId: 'dvohra-github'
     
