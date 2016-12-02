@@ -1,6 +1,6 @@
 node("docker") {
     docker.withRegistry('https://index.docker.io/v1/', 'dvohra-dockerhub') {
-        sh "apt-get install git"
+        sh "sudo apt-get install git"
         git url: "https://github.com/dvohra/mysql.git", credentialsId: 'dvohra-github'
     
         sh "git rev-parse HEAD > .git/commit-id"
