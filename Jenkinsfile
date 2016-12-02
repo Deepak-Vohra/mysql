@@ -4,7 +4,10 @@ node("docker") {
 
         sh "ls -l"
         sh "env"
-       sh "find -name script.sh"
+       sh "cd /bin"
+        sh "ls -l"
+          sh "cd /usr/bin"
+        sh "ls -l"
       
         git url: "https://github.com/dvohra/mysql.git", credentialsId: 'dvohra-github'
     
