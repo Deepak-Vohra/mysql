@@ -1,6 +1,8 @@
 node("docker") {
     docker.withRegistry('https://index.docker.io/v1/', 'dvohra-dockerhub') {
-        
+        deleteDir()
+  stage 'Checkout'
+  checkout scm
         sh "ls -l"
         sh "env"
        sh ""
