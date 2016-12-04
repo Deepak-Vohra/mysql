@@ -47,4 +47,4 @@ VOLUME /var/lib/mysql
 #ENTRYPOINT ["./docker-entrypoint.sh"]
  
 EXPOSE 3306
- CMD ["mysql_safe","-u mysql"]
+ CMD ["mysql","-u root"]
