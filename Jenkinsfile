@@ -10,7 +10,7 @@ node("docker") {
     
         stage "build"
         sh "ls -l"
-        sh "docker"
+        sh "docker --help"
         def app = docker.build "dvohra/mysql"
     
         stage "publish"
