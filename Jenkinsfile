@@ -9,6 +9,7 @@ node("docker") {
         println commit_id
     
         stage "build"
+        sh "ls -l"
         def app = docker.build "dvohra/mysql"
     
         stage "publish"
