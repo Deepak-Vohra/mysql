@@ -9,8 +9,7 @@ node("docker") {
         println commit_id
     
         stage "build"
-        sh "ls -l"
-        sh "docker --help"
+      
         sh "sudo service docker start"
         sh "sudo service docker status"
         def app = docker.build "dvohra/mysql"
