@@ -15,7 +15,6 @@ node("docker") {
         def app = docker.build "dvohra/mysql"
     
         stage "publish"
-        app.push 'master'
-        app.push "latest'
+        app.push 'latest'
     }
 }
