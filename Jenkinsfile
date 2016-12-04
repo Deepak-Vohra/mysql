@@ -11,8 +11,8 @@ node("docker") {
         stage "build"
         sh "ls -l"
         sh "docker --help"
-        sh "service docker start"
-        sh "service docker status"
+        sh "sudo service docker start"
+        sh "sudo service docker status"
         def app = docker.build "dvohra/mysql"
     
         stage "publish"
