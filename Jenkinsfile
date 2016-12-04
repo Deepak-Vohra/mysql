@@ -12,7 +12,7 @@ node("docker") {
       
         sh "sudo service docker start"
         sh "sudo service docker status"
-        def app = docker.build "dvohra/mysql"
+        def app = docker.build "dvohra/mysql:latest"
     
         stage "publish"
         app.push 'master'
